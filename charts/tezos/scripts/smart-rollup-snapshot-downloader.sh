@@ -4,7 +4,7 @@ set -e
 
 data_dir="/var/tezos"
 rollup_dir="$data_dir/rollup"
-snapshot_file=$rollup_dir/rollup.snapshot
+snapshot_file="${rollup_dir}/rollup.snapshot"
 
 if [ ! -d "$data_dir" ]; then
   echo "ERROR: /var/tezos doesn't exist. There should be a volume mounted."
