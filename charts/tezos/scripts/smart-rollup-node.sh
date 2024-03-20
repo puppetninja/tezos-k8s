@@ -12,7 +12,7 @@ cp /usr/local/share/tezos/evm_kernel/* "$ROLLUP_DATA_DIR_PREIMAGES"
 
 set -x
 $TEZ_BIN/octez-smart-rollup-node \
-  --endpoint http://tezos-node-rpc:8732 \
+  --endpoint https://ghostnet.ecadinfra.com \
   -d $CLIENT_DIR \
   init operator config for ${ROLLUP_ADDRESS} with operators ${OPERATORS_PARAMS} \
   --data-dir ${ROLLUP_DATA_DIR} \
@@ -21,7 +21,7 @@ $TEZ_BIN/octez-smart-rollup-node \
   --force
 
 CMD="$TEZ_BIN/octez-smart-rollup-node \
-  --endpoint http://tezos-node-rpc:8732 \
+  --endpoint https://ghostnet.ecadinfra.com \
   -d $CLIENT_DIR \
   run \
   --data-dir ${ROLLUP_DATA_DIR}"
